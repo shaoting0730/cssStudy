@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    position: relative;
+    width: 33.33%;
+    height: 350px;
+    float: left;
+}
+
+figcaption {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: red;
+    font-family: 'Microsoft YaHei'
+}
+
+figure img {
+    transition: all 0.35s;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+
+figure figcaption p,
+h2,
+span,
+div {
+    transition: all 0.35s;
+}
+
+/* 简易响应式布局 */
+@media screen and (max-width:600px) {
+    figure {
+        width: 100%
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:1000px) {
+    figure {
+        width: 50%
+    }
+}
+
+@media screen and (min-width:1001px) {
+    figure {
+        width: 33.33%
+    }
+}
+
+/* 图片1 平移动画*/
+.test1 {
+    background-color: #ffffff
+}
+
+.test1 figcaption p {
+    background-color: #ffffff;
+    color: #333333;
+    margin: 5px;
+    text-align: center;
+    transform: translate(-120px, 0px)
+}
+
+.test1 figcaption p:nth-of-type(1) {
+    transition-delay: 0.05s
+}
+
+.test1 figcaption p:nth-of-type(2) {
+    transition-delay: 0.1s
+}
+
+.test1 figcaption p:nth-of-type(3) {
+    transition-delay: 0.155s
+}
+
+.test1 figcaption {
+    padding: 20px
+}
+
+.test1:hover figcaption p {
+    transform: translate(0px, 0px)
+}
+
+.test1:hover img {
+    transform: translate(-50px, 0px);
+    opacity: 0.5;
+    width: 120%
+}
+
+/* 图片2 旋转动画 */
+.test2 {
+    background-color: burlywood;
+    overflow: hidden;
+}
+
+.test2 figcaption {
+    width: 100%;
+    height: 100%
+}
+
+.test2 figcaption h2 {
+    margin-top: 15%;
+    margin-left: 15%;
+    color: yellow;
+}
+
+.test2 figcaption p {
+    margin-top: 5%;
+    margin-left: 15%;
+    transform: translate(0px, 50px);
+    opacity: 0;
+}
+
+.test2 figcaption div {
+    border: 2px solid #ffffff;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: translate(0px, -350px) rotate(0deg)
+}
+
+.test2:hover figcaption div {
+    transform: translate(0px, 0px) rotate(360deg)
+}
+
+.test2:hover img {
+    opacity: 0.5;
+    height: 110%;
+    width: 110%;
+    overflow: hidden;
+}
+
+.test2:hover figcaption p {
+    margin-left: 15%;
+    transform: translate(0px, 0px);
+    opacity: 1;
+    color: yellow;
+}
+
+/* 图片3 斜切动画 */
+.test3 {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.test3 figcaption {
+    top: 30%;
+    left: 15%;
+}
+
+.test3 figcaption h2 {
+    opacity: 0;
+    transform: skew(90deg)
+}
+
+.test3 figcaption p {
+    opacity: 0;
+    transform: skew(90deg);
+    transition-delay: 0.3s;
+}
+
+.test3:hover img {
+    opacity: 0.5;
+    height: 110%;
+}
+
+.test3:hover figcaption h2 {
+    transform: skew(0deg);
+    opacity: 1;
+
+}
+
+.test3:hover figcaption p {
+    transform: skew(0deg);
+    opacity: 1;
+
+}
+
+/* 图片4 */
+.test4 {
+    background-color: plum;
+    overflow: hidden;
+}
+
+.test4 figcaption h2 {
+    margin-top: 15%;
+    margin-left: 15%;
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+}
+
+.test4 figcaption p {
+    margin-top: 5px;
+    margin-left: 15%;
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+}
+
+.test4 figcaption {
+    width: 100%;
+    height: 100%;
+}
+
+.test4 figcaption div {
+    border: 2px #ffffff;
+    border-style: dotted solid double dashed;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+}
+
+.test4:hover figcaption div {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.test4:hover img {
+    opacity: 0.5;
+    transform: scale(1.2, 1.2);
+}
+
+.test4:hover figcaption h2 {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.test4:hover figcaption p {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+/* 图片5 */
+
+.test5 {
+    background: #000;
+}
+
+.test5 figcaption {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.test5 figcaption div.line1 {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    top: 5%;
+    position: absolute;
+    transform: scale(1, 0);
+    opacity: 0;
+}
+
+.test5 figcaption div.line2 {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 10%;
+    position: absolute;
+    transform: scale(0, 1);
+    opacity: 0;
+}
+
+.test5:hover figcaption div.line1 {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.test5:hover figcaption div.line2 {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.test5 figcaption h2 {
+    margin: 15% 0 0 15%;
+    transform: scale(0.8, 0.8);
+    opacity: 0;
+}
+
+.test5 figcaption p {
+    margin: 2% 0 0 15%;
+    transform: scale(0.8, 0.8);
+    opacity: 0;
+}
+
+.test5:hover figcaption h2 {
+    transform: scale(1, 1);
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.test5:hover figcaption p {
+    transform: scale(1, 1);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.test5 img {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.test5:hover img {
+    transform: scale(1, 1);
+    opacity: 0.5;
+}
+
+/* 图片6 */
+.test6 {
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.test6 figcaption {
+    width: 100%;
+    height: 100%;
+}
+
+.test6 figcaption div {
+    position: absolute;
+    top: 100%;
+    height: 50%;
+    width: 200%;
+    background: #ffffff;
+}
+
+.test6:hover figcaption div {
+    position: absolute;
+    background: #ffffff;
+    transform: rotate(-25deg);
+    transform-origin: 0% 0%;
+}
+
+.test6:hover figcaption div p {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+.test6:hover img {
+    transform: scale(1.2, 1.2)
+}
