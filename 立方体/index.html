@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-立方体</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #wrap {
+            width: 600px;
+            height: 600px;
+            background-color: green;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        #box {
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            width: 300px;
+            height: 300px;
+            /* background-color: brown; */
+            /* 开启3D特效 */
+            transform-style: preserve-3d;
+            animation: moveAnimation 10s infinite linear;
+            /* 动画名 时间 无限循环 线性速度 */
+        }
+
+        .out-div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s ease-in;
+        }
+
+        .out-div img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 每个面的位置 */
+        .out-front {
+            transform: translateZ(150px);
+        }
+
+        .out-back {
+            transform: translateZ(-150px);
+        }
+
+        .out-left {
+            transform: translateX(-150px) rotateY(90deg);
+        }
+
+        .out-right {
+            transform: translateX(150px) rotateY(-90deg);
+        }
+
+        .out-top {
+            transform: translateY(-150px) rotateX(90deg);
+        }
+
+        .out-bottom {
+            transform: translateY(150px) rotateX(-90deg);
+        }
+
+        /* 滑入扩散 */
+        #wrap:hover .out-front {
+            transform: translateZ(250px);
+        }
+
+        #wrap:hover .out-back {
+            transform: translateZ(-250px);
+        }
+
+        #wrap:hover .out-left {
+            transform: translateX(-250px) rotateY(90deg);
+        }
+
+        #wrap:hover .out-right {
+            transform: translateX(250px) rotateY(-90deg);
+        }
+
+        #wrap:hover .out-top {
+            transform: translateY(-250px) rotateX(90deg);
+        }
+
+        #wrap:hover .out-bottom {
+            transform: translateY(250px) rotateX(-90deg);
+        }
+
+        /* 动画 */
+        @keyframes moveAnimation {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id='wrap'>
+        <div id="box">
+            <div class="out-div out-front">
+                <img src="./imgs/1.jpg" alt="">
+            </div>
+            <div class="out-div out-back">
+                <img src="./imgs/2.jpg" alt="">
+            </div>
+            <div class="out-div out-left">
+                <img src="./imgs/3.jpg" alt="">
+            </div>
+            <div class="out-div out-right">
+                <img src="./imgs/4.jpg" alt="">
+            </div>
+            <div class="out-div out-top">
+                <img src="./imgs/5.jpg" alt="">
+            </div>
+            <div class="out-div out-bottom">
+                <img src="./imgs/6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
