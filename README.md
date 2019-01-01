@@ -1,6 +1,6 @@
 css学习
 
-### 各方简单动画  <br/>
+### 简单动画  <br/>
 ![image](https://github.com/pheromone/cssStudy/blob/master/1/1.gif) <br/>
 
 ### 贺卡  <br/>
