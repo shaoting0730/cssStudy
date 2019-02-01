@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>心形|蛋形</title>
+    <style>
+        .heart{
+            width: 100px;
+            height: 90px;
+            position: relative;
+            margin: 100px auto;
+            /* background-color: #ff0; */
+        }
+        .heart::before{
+            content: '';
+            position: absolute;
+            left: 50px;
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50px 40px 0px 0px;
+            -webkit-transform-origin: 0 100%;
+            -moz-transform-origin: 0 100%;
+            -o-transform-origin: 0 100%;
+            -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .heart::after{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50px 40px 0px 0px;
+            -webkit-transform-origin: 100% 100%;
+            -moz-transform-origin: 100% 100%;
+            -o-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .egg{
+            width: 126px;
+            height: 180px;
+            background-color: aqua;
+            margin: 100px auto;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="egg"></div>
+</body>
+</html>

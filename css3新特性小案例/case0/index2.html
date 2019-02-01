@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>五角星 | 六角星</title>
+    <style>
+        /* 五角星 */
+        .star_five{
+            width: 0px;
+            height: 0px;
+            border-bottom: 70px solid red;
+            border-top:0px solid red;
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent; 
+            margin: 100px auto; 
+            -webkit-transform: rotate(35deg);
+            -ms-transform: rotate(35deg);
+            -o-transform: rotate(35deg);
+            transform: rotate(35deg); 
+            position: relative;  
+        }
+        .star_five::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 80px solid red;
+            border-top: 0px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            top: -45px;
+            left: -65px;
+            -webkit-transform: rotate(-35deg);
+            -ms-transform: rotate(-35deg);
+            -o-transform: rotate(-35deg);
+            transform: rotate(-35deg); 
+        }
+        .star_five::after{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 70px solid red;
+            border-top: 0px solid red;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            position: absolute;
+            top: 3px;
+            left: -105px;
+            -webkit-transform: rotate(-70deg);
+            -ms-transform: rotate(-70deg);
+            -o-transform: rotate(-70deg);
+            transform: rotate(-70deg); 
+        }
+        /* 六角星 */
+        .star_six{
+            width: 0px;
+            height: 0px;
+            border-bottom: 100px solid red;
+            border-top: 0px solid red;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            margin: 100px auto;    
+            position: relative;
+        }
+        .star_six::after{
+            position: absolute;
+            top: -70px;
+            left: -50px;    
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 0px solid red;
+            border-top: 100px solid red;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            margin: 100px auto;    
+        }
+    </style>
+</head>
+<body>
+    <div class="star_five"></div>
+    <div class="star_six"></div>
+    
+</body>
+</html>

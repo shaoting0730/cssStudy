@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>五边形|六边形</title>
+    <style>
+       .zheng{
+           width: 50px;
+           height: 50px;
+           border-top: 50px solid red;
+           border-left: 50px solid yellow;
+           border-right: 50px solid brown;
+           border-bottom: 50px solid blue;
+       }
+
+
+       .wubian{
+           margin: 100px auto;
+           width: 54px;
+           height: 0px;
+           border-top: 50px solid red;
+           border-bottom: 0px solid red;
+           border-left: 18px solid transparent;
+           border-right: 18px solid transparent;
+           position: relative;
+       }
+       .wubian::after{
+           content: '';
+           position: absolute;
+           top:-85px; /* (-35+-50) */
+           left: -18px;
+           width: 0px;
+           height: 0px;
+           border-bottom: 35px solid red;
+           border-top: 0px solid red;
+           border-left: 45px solid transparent; /* (54+18+18)/2 */
+           border-right: 45px solid transparent;
+       }
+
+       .liubian{
+           margin: 100px auto;
+           width: 100px;
+           height: 55px;
+           background-color: red;
+           position: relative;
+       }
+       .liubian::before{
+           position: absolute;
+           top:-25px;
+           content: '';
+           width: 0px;
+           height: 0px;
+           border-bottom: 25px solid red;
+           border-top: 0px solid red;
+           border-left: 50px solid transparent; /* 100/2 */
+           border-right: 50px solid transparent;    
+       }
+       .liubian::after{
+           position: absolute;
+           top: 55px;
+           content: '';
+           width: 0px;
+           height: 0px;
+           border-bottom: 0px solid red;
+           border-top: 25px solid red;
+           border-left: 50px solid transparent; /* 100/2 */
+           border-right: 50px solid transparent; 
+       }
+    </style>
+</head>
+<body>
+    <div class="zheng"></div>
+    <div class="wubian"></div>
+    <div class="liubian"></div>
+</body>
+</html>
