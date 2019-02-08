@@ -1,0 +1,98 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+ul,
+ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+.tudou_main {
+  width: 616px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.title {
+  height: 62px;
+  line-height: 62px;
+  border-top: solid 1px #D0D0D0;
+  margin-top: 20px; }
+  .title h3 {
+    font: 0.3548387097 "微软雅黑";
+    color: #575757;
+    width: 106px;
+    border-top: solid 2px #f97374;
+    margin-top: -1px;
+    position: relative;
+    float: left;
+    height: 61px; }
+  .title_nav {
+    float: right;
+    font-size: 14px;
+    color: #575757; }
+    .title_nav li {
+      float: left; }
+    .title_nav span {
+      margin: 0 11px; }
+    .title_nav a {
+      color: #575757; }
+      .title_nav a:hover {
+        color: red; }
+
+.content {
+  margin-right: -32px;
+  zoom: 1; }
+  .content:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.item {
+  width: 130px;
+  height: 164px;
+  float: left;
+  margin-right: 25px; }
+  .item_img {
+    height: 78px;
+    position: relative;
+    margin-bottom: 5px; }
+  .item span {
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+    width: 35px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    background-repeat: no-repeat; }
+  .item .cq {
+    background-image: url(./cq.png); }
+  .item .bq {
+    background-image: url(./bq.png); }
+  .item_list {
+    line-height: 22px;
+    font-size: 12px; }
+    .item_list a {
+      color: #666666; }
+      .item_list a:hover {
+        color: red; }
+    .item_list .userName, .item_list .play, .item_list .mess {
+      padding-left: 17px;
+      background-repeat: no-repeat; }
+    .item_list .userName {
+      background-image: url(./head.png); }
+    .item_list .play {
+      background-image: url(./play.png);
+      margin-right: 5px; }
+    .item_list .mess {
+      background-image: url(./coment.png); }
+
+/*# sourceMappingURL=style.css.map */

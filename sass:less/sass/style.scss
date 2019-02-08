@@ -1,0 +1,141 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0
+}
+ul,
+ol{
+    list-style: none
+}
+a{
+    text-decoration: none;
+}
+@mixin clearfix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    zoom: 1;
+}
+@mixin bc{
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    border: none;
+}
+$fs: 14px;
+
+// 列表总宽度
+$td_width:616px;
+.tudou_main{
+    width: $td_width;
+    @include bc;
+}
+.title{
+    $h:62px;
+    $border_color:#D0D0D0;
+    height: $h;
+    line-height: $h;
+    border-top: solid 1px $border_color;
+    margin-top: 20px;
+    h3{
+        // font-size: 22px;
+        // font-family: "微软雅黑";
+        // font-weight: normal;
+        font: 22px/$h "微软雅黑";
+        color: #575757;
+        width: 106px;
+        border-top: solid 2px #f97374;
+        margin-top: -1px;
+        position: relative;
+        float: left;
+        height: $h - 1;
+    }
+    $color:#575757;
+    &_nav{
+        float: right;
+        font-size: $fs;
+        color: $color;
+        li{
+            float: left;
+        }
+        span{
+            margin:0 11px;
+        }
+        a{
+            color:$color;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}
+
+// 内容
+.content{
+    margin-right: -32px;
+    @include clearfix;
+}
+.item{
+    $w:130px;
+    $h:164px;
+    $img_h:78px;
+    $mr:25px;
+    width: $w;
+    height: $h;
+    float: left;
+    margin-right: $mr;
+
+    &_img{
+        height: $img_h;
+        position: relative;
+        margin-bottom: 5px;
+    }
+    span{
+        position: absolute;
+        right: 0px;
+        bottom: 2px;
+        width: 35px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 10px;
+        color: #ffffff;
+        text-align: center;
+        background-repeat: no-repeat;
+    }
+    .cq{
+        background-image: url(./cq.png);
+    }
+    .bq{
+        background-image: url(./bq.png)
+    }
+
+    // item_list
+    &_list{
+        line-height: 22px;
+        font-size: $fs - 2;
+        a{
+            color: #666666; 
+            &:hover{
+                color: red;
+            }
+        }
+        .userName,.play,.mess{
+            padding-left: 17px;
+            // background-position: left center;
+            background-repeat: no-repeat;
+        }
+        .userName{
+            background-image: url(./head.png)
+        }
+        .play{
+            background-image: url(./play.png);
+            margin-right: 5px;
+        }
+        .mess{
+            background-image: url(./coment.png)
+        }
+    }
+}
