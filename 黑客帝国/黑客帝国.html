@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+	body{margin: 0;}
+  </style>
+ </head>
+ <body>
+		<canvas id="canvas" width="500" height="500" style="background-color:#000;"></canvas>
+
+		<script>
+			//获取元素
+			//document 文档
+			//getElement 获取一个标签
+			//ById  用Id命名
+			var canvas = document.getElementById("canvas");
+			//获取canvas的权限
+			var ctx = canvas.getContext("2d");
+			/*
+				获取画布的大小和屏幕一样
+				1.获取屏幕对象
+				2.获取屏幕宽高
+				3.赋值给画布
+			*/
+			var s = window.screen;
+			var w = s.width;
+			var h = s.height;
+			canvas.width = w;
+			canvas.height = h;
+			var fontSize = 14;
+			var str = "QWERTYUIOPASDFGHJKLZMXNCBV";
+			//计算一行能显示多少文字  浏览器宽/每个字大小  但是不能出现半个字
+			var clos = Math.floor(w/fontSize);
+			//思考每个字体的坐标
+			//创建一个数组存入clos个0 怎么存  for循环
+			var drops = [];
+			for (var i=0;i<clos;i++){
+				drops.push(0)
+			}
+			function drawString(){
+				//画布上画画
+				//给矩形填充一个颜色
+				ctx.fillStyle="rgba(0,0,0,0.05)"
+				//画一个矩形区域实现渐渐没有的感觉
+				ctx.fillRect(0,0,w,h);
+				//字体样式
+				ctx.font = "700 "+fontSize+"px 微软雅黑";
+				//字体颜色
+				ctx.fillStyle = "#00ff00";
+				//画布上写字  内容 x  y 每个字体的x轴和y轴
+				for(var i=0;i<clos;i++){
+					//x轴
+					var x = i*fontSize;
+					//y轴
+					var y = drops[i]*fontSize;
+					ctx.fillText(str[Math.floor(Math.random()*str.length)],x,y);
+					//多次执行只需要加一个判断  添加并且判断
+					if(y > h && Math.random()>0.99){
+						drops[i] = 0;
+					}
+					drops[i]++;
+				}
+			}
+			setInterval(drawString,30);
+
+			//随机颜色
+			function randomColor(){
+				var r = Math.floor(Math.random()*256);
+				var g = Math.floor(Math.random()*256);
+				var b = Math.floor(Math.random()*256);
+				return "rgb("+r+","+g+","+b+")"
+				
+			}
+		</script>
+ </body>
+</html>
+
+进入直播间的扣1  6个人扣1  就开始直播
+
