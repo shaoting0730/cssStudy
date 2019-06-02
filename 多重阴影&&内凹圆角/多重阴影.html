@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多重阴影</title>
+</head>
+<style>
+.div1{
+     width:200px;
+     height: 200px;
+     background: blue;
+     outline: 5px solid #00FF00;
+     border:5px solid red;
+     border-radius: 20px;
+     margin-bottom: 100px;
+    }
+    .div2{
+     width:200px;
+     height: 200px;
+     background: pink;
+     border-radius: 20px;
+     box-shadow: 0 0 0 5px red,
+      0 0 0 10px yellow,
+      0 0 0 15px orange;
+
+    }
+</style>
+<body>
+    <div class='div1'></div>
+    <div class='div2'></div>
+</body>
+</html>
